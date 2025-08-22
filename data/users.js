@@ -1,11 +1,17 @@
 const users = [
     {
         username: "john",
-        password: "demo"
+        password: "demo",
+        firstName: "John",
+        lastName: "Smith",
+        isValidUser: true
     },
     {
         username: "jane",
-        password: "demo"
+        password: "demo",
+        firstName: "John",
+        lastName: "Smith",
+        isValidUser: false
     }
 ];
 
