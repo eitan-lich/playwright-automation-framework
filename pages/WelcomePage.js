@@ -1,4 +1,4 @@
-export default class HomePage {
+export default class WelcomePage {
     /**
      * @param {import('@playwright/test').Page} page
      */
@@ -10,6 +10,7 @@ export default class HomePage {
         this.loginButton = this.page.locator('input[value="Log In"]');
         this.forgotLoginInfo = this.page.getByRole("a", { name: "lookup.htm" });
         this.registerLink = this.page.getByRole("a", { name: "register.htm" });
+        this.loginErrorMessage = this.page.getByText("The username and password could not be verified.");
     }
 
     async navigateTo() {
@@ -28,5 +29,9 @@ export default class HomePage {
 
     async navigateToRegister() {
         await this.registerLink.click();
+    }
+
+    async verifyLoginError() {
+        return await this.loginErrorMessage.isVisible();
     }
 }
