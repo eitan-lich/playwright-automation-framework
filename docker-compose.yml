@@ -1,0 +1,5 @@
+services:
+    automation-container:
+        image: automation:latest
+        volumes:
+            - ./container-output:/app/playwright-report
