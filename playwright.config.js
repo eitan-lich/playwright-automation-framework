@@ -7,7 +7,7 @@ export default defineConfig({
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
     screenshot: "on",
     video: "on",
     viewport: null,
