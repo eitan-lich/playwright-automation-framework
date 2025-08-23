@@ -1,6 +1,6 @@
 import { test } from '../../utils/fixtures';
 import { expect } from '@playwright/test';
-import users from "../../data/users.js";
+import users from "../../data/existingUsers.js";
 
 test.describe("Login tests", () => {
 

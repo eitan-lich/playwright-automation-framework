@@ -9,7 +9,7 @@ export default class WelcomePage {
         this.passwordInput = this.page.locator("input[name='password']");
         this.loginButton = this.page.locator('input[value="Log In"]');
         this.forgotLoginInfo = this.page.getByRole("a", { name: "lookup.htm" });
-        this.registerLink = this.page.getByRole("a", { name: "register.htm" });
+        this.registerLink = this.page.getByText("Register", { exact: true });
         this.loginErrorMessage = this.page.getByText("The username and password could not be verified.");
     }
 
@@ -27,7 +27,7 @@ export default class WelcomePage {
         await this.loginButton.click();
     }
 
-    async navigateToRegister() {
+    async goToRegisterPage() {
         await this.registerLink.click();
     }
 
