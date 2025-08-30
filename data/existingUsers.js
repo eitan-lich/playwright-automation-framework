@@ -4,14 +4,16 @@ const users = [
         password: "demo",
         firstName: "John",
         lastName: "Smith",
-        isValidUser: true
+        isValidUser: true,
+        totalAccountBalance: "$7492.67"
     },
     {
         username: "jane",
         password: "demo",
         firstName: "John",
-        lastName: "Smith",
-        isValidUser: false
+        lastName: "Denver",
+        isValidUser: false,
+        totalAccountBalance: "$1,250.00"
     }
 ];
 
