@@ -1,0 +1,6 @@
+node_modules
+container-output
+npm-debug.log
+.git
+.gitignore
+README.md

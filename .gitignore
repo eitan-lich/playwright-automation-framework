@@ -144,3 +144,4 @@ vite.config.ts.timestamp-*
 /blob-report/
 /playwright/.cache/
 /container-output/
+/pvc-results

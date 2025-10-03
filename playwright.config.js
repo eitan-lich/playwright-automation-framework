@@ -7,7 +7,8 @@ export default defineConfig({
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
-    headless: false,
+    // Priority: CLI arg > ENV var > default
+    headless: process.env.CI === 'true' || false,
     screenshot: "on",
     video: "on",
     viewport: null,

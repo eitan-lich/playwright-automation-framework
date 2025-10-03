@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: playwright-tests
+spec:
+  backoffLimit: 0  # Don't retry on failure
+  template:
+    spec:
+      containers:
+      - name: playwright
+        image: automation:latest
+        imagePullPolicy: Never
+        env:
+        - name: CI
+          value: "true"
+        volumeMounts:
+        - name: test-results
+          mountPath: /app/test-results
+      volumes:
+      - name: test-results
+        persistentVolumeClaim:
+          claimName: test-results-pvc
+      restartPolicy: Never  # Required for Jobs. Options: Never or OnFailureclear
