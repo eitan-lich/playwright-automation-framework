@@ -1,5 +1,7 @@
 services:
     automation-container:
-        image: automation:latest
+        build: .
+        environment:
+          - CI=true
         volumes:
-            - ./container-output:/app/playwright-report
+          - ./container-output:/app/playwright-report

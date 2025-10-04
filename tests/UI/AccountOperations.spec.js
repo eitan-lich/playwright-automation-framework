@@ -10,7 +10,7 @@ test.describe("Account operations tests", () => {
         expect(pageLoadedSuccessfully).toBeTruthy();
     })
 
-    users.forEach(({ username, password, firstName, lastName, totalAccountBalance }) => {
+    users.forEach(({ username, password, firstName, lastName, totalAccountBalance, isValid }) => {
         test(`Should display the expected total balance for: ${firstName} ${lastName}`, async ({ welcomePage, accountServicesPage }) => {
             if (!isValid) {
                 test.skip("Skipping test becaus user is not valid");

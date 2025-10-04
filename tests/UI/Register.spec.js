@@ -10,7 +10,7 @@ test.describe("Register tests", () => {
     })
 
     users.forEach(({ firstName, lastName, address, city, state, zipCode, phone, ssn, username, password }) => {
-        test(`Register: ${firstName} ${lastName}, ${address}, ${city}, ${state}, ${zipCode}, ${phone}, ${ssn}, ${username}, ${password}`, async ({ registerPage }) => {
+        test(`Register: ${firstName} ${lastName}`, async ({ registerPage }) => {
 
             await registerPage.fillRegistrationForm(firstName, lastName, address, city, state, zipCode, phone, ssn, username, password);
             await registerPage.submitRegistration();
