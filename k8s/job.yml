@@ -14,10 +14,10 @@ spec:
         - name: CI
           value: "true"
         volumeMounts:
-        - name: test-results
-          mountPath: /app/test-results
+        - name: playwright-report
+          mountPath: /app/playwright-report
       volumes:
-      - name: test-results
+      - name: playwright-report
         persistentVolumeClaim:
-          claimName: test-results-pvc
+          claimName: playwright-report-pvc
       restartPolicy: Never  # Required for Jobs. Options: Never or OnFailureclear

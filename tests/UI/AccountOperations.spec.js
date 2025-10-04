@@ -12,6 +12,10 @@ test.describe("Account operations tests", () => {
 
     users.forEach(({ username, password, firstName, lastName, totalAccountBalance }) => {
         test(`Should display the expected total balance for: ${firstName} ${lastName}`, async ({ welcomePage, accountServicesPage }) => {
+            if (!isValid) {
+                test.skip("Skipping test becaus user is not valid");
+            }
+
             await welcomePage.navigateTo();
             await welcomePage.login(username, password);
 
@@ -20,6 +24,10 @@ test.describe("Account operations tests", () => {
         });
 
         test(`Should logout successfully for: ${firstName} ${lastName}`, async ({ welcomePage, accountServicesPage }) => {
+            if (!isValid) {
+                test.skip("Skipping test becaus user is not valid");
+            }
+
             await welcomePage.navigateTo();
             await welcomePage.login(username, password);
             await accountServicesPage.logout();

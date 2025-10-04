@@ -5,11 +5,11 @@ const users = [
         firstName: "John",
         lastName: "Smith",
         isValidUser: true,
-        totalAccountBalance: "$7492.67"
+        totalAccountBalance: "$7289.67"
     },
     {
         username: "jane",
-        password: "demo",
+        password: "demo1",
         firstName: "John",
         lastName: "Denver",
         isValidUser: false,
